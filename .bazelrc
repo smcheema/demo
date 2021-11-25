@@ -1,0 +1,2 @@
+build --cxxopt=-std=c++17 --experimental_convenience_symlinks=ignore --define gotags=bazel
+test --define gotags=bazel
