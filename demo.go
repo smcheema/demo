@@ -1,4 +1,4 @@
-package demo
+package main
 
 import (
 	"fmt"
@@ -6,5 +6,6 @@ import (
 )
 
 func main() {
+	fmt.Println(allocator.DiskResource)
 	fmt.Println(allocator.QPS)
 }

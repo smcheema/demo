@@ -1,4 +1,4 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library")
+load("@io_bazel_rules_go//go:def.bzl", "go_binary","go_library")
 load("@bazel_gazelle//:def.bzl", "gazelle")
 
 # gazelle:resolve go github.com/smcheema/demo @com_github_smcheema_demo//:demo
@@ -7,10 +7,8 @@ gazelle(
     prefix = "github.com/smcheema/demo",
 )
 
-go_library(
+go_binary(
     name = "demo",
     srcs = ["demo.go"],
-    importpath = "github.com/smcheema/demo",
-    visibility = ["//visibility:public"],
-    deps = ["@com_github_smcheema_demo//:demo"],
+    deps = ["@com_github_smcheema_allocator//:allocator"],
 )
